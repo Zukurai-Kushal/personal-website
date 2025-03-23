@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+  --color-background: white;
+  --color-font-description: black;
+  --color-font-accent: #292524;
+
+}
+
+body{
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-width: 320px;
+  font-family: "Open Sans", sans-serif;
+}
+
