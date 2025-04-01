@@ -2,16 +2,181 @@
 
 :root{
   --color-background: white;
-  --color-font-description: black;
+  --color-font: black;
   --color-font-accent: #292524;
+  --color-font-light: #78716c;
+  --color-button-background: rgba(0, 0, 0, 0.05);
+  --color-highlight: #fb923c;
+  scroll-behavior: smooth;
 
 }
 
 body{
   margin: 0;
+  padding: 20px;
   display: grid;
   place-items: center;
   min-width: 320px;
+  /* min-height: 100vh; */
   font-family: "Open Sans", sans-serif;
+  font-size: 0.875em;
+  text-align: center;
+  background-color: var(--color-background);
+  color: var(--color-font);
+  background-image: url('../assets/topography.svg');
 }
 
+p{
+  max-inline-size: 66ch;
+  line-height: 2;
+}
+
+#hero{
+  margin: 0;
+  padding: 150px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icon {
+  width: 1.5em;
+}
+
+#profile-container{
+  display: grid;
+  place-items: center;
+  color: var(--color-font-accent);
+}
+
+#profile-container h1{
+  font-size: 2.25em;
+  font-weight: 800;
+}
+
+#profile-container h2{
+  font-size: 1.1em;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  color: var(--color-font-accent);
+}
+
+#profile-container img{
+  width: 150px;
+  border-radius: 50%;
+  margin: 10px;
+  transition: all 0.15s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#section-about-me{
+  display: grid;
+  place-content: center;
+}
+
+nav, .profile-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profile-links{
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+nav a{
+  padding: 5px 10px;
+  color: var(--color-font);
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+nav a:hover{
+  background-color: var(--color-font);
+  color: var(--color-background);
+}
+
+.profile-links a, .project-container .links a{
+  display: flex;
+  gap: 1ch;
+  padding: 5px 15px;
+  color: var(--color-font);
+  background-color: var(--color-button-background);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+.profile-links a:hover, .project-container .links a:hover{
+  transform: translateY(-5px);
+  background-color: var(--color-background);
+  border-color: var(--color-font);
+}
+
+.project-container{
+  background-color: var(--color-background);
+  border: 1px solid var(--color-button-background);
+  border-radius: 5px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.project-container p{
+  max-inline-size: none;
+  margin: 10px 0;
+}
+
+.project-container h2 {
+  font-size: 2em;
+  color: var(--color-font-accent);
+}
+
+.light-font{
+  color: var(--color-font-light);
+}
+
+.project-container .links{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px 0;
+  gap: 20px;
+}
+
+.project-container .links .icon{
+  width: 1em;
+}
+
+@media (min-width: 740px) {
+
+  body {
+    font-size: 1em;
+  }
+  
+  #hero {
+    font-size: 1.25em;
+  }
+
+  #profile-container img{
+    width: 250px;
+  }
+}
+
+@media (min-width: 1025px){
+  #hero{
+    flex-direction: row;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  #hero p{
+    text-align: start;
+  }
+}
