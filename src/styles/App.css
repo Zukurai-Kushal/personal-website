@@ -52,12 +52,13 @@ p{
 #profile-container h1{
   font-size: 2.25em;
   font-weight: 800;
+  letter-spacing: normal;
 }
 
 #profile-container h2{
   font-size: 1.1em;
   font-weight: 300;
-  letter-spacing: 2.5px;
+  letter-spacing: 0.2em;
   color: var(--color-font-accent);
 }
 
@@ -71,6 +72,11 @@ p{
 #section-about-me{
   display: grid;
   place-content: center;
+}
+
+h1{
+  color: var(--color-font-accent);
+  padding: 5px;
 }
 
 nav, .profile-links{
@@ -169,7 +175,7 @@ nav a:hover{
   }
 }
 
-@media (min-width: 1025px){
+@media (min-width: 1200px){
   #hero{
     flex-direction: row;
     flex-direction: row-reverse;
