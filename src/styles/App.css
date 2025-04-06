@@ -74,9 +74,15 @@ p{
   place-content: center;
 }
 
-h1{
+section > h1{
   color: var(--color-font-accent);
   padding: 5px;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
 }
 
 nav, .profile-links{

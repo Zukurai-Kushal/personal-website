@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './styles/App.css'
 import Header from './components/Header'
 import WebDevProjects from './components/WebDevProjects'
+import OtherProjects from './components/OtherProjects'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,9 +17,7 @@ function App() {
       <Header/>
       <main>
         <WebDevProjects/>
-        {/* <section id='section-other-projects'>
-          Other Projects
-        </section> */}
+        <OtherProjects/>
       </main>
     </>
   )
