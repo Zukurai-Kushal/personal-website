@@ -24,6 +24,11 @@
     flex-shrink: 0;
 }
 
+.image-contain .image-carousel-image{
+    object-fit: contain;
+    aspect-ratio: auto;
+}
+
 .image-carousel-ui {
     padding: 10px 0;
     display: flex;

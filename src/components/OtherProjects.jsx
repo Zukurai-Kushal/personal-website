@@ -1,7 +1,9 @@
 import Project from "./ProjectObject";
 import React from 'react';
 import AsideNavBar from "./AsideNavBar";
-const resumeAppImages = Object.values(import.meta.glob('../assets/projectAssets/resume-screenshots/*',{ eager: true, query: '?url', import: 'default' }));
+import AIoTReport from "../assets/projectAssets/Smart_Water_Auditing_Paper.pdf"
+const waterAuditImages = Object.values(import.meta.glob('../assets/projectAssets/smart-water-audit-images/*', { eager: true, query: '?url', import: 'default' }));
+const hippityHoppityImages= Object.values(import.meta.glob('../assets/projectAssets/hippity-hoppity-gameplay/*', { eager: true, query: '?url', import: 'default' }));
 
 export default function OtherProjects() {  
     return (
@@ -10,26 +12,32 @@ export default function OtherProjects() {
             id={"section-other-projects"}
         >
             <Project
-                images={resumeAppImages}
-                title="AIoT"
-                description="A web application that helps you write, modify and customize your resume.
-                You can store multiple versions of your resume and easily customize each one by including or excluding specific information. 
-                I designed the app with reusability in mind, to create a tool that stays with you and grows alongside you."
-                live="https://myresumewriter.netlify.app/"
-                source="https://github.com/Zukurai-Kushal/cv-app"
-                date="March 2025"
+                images={hippityHoppityImages}
+                title="Hippity Hoppity"
+                description="Hippity Hoppity is a platformer game made using Unity."
+                source="https://github.com/Zukurai-Kushal/Hippity-Hoppity"
+                otherLinks={[["https://zukku.itch.io/hippityhoppity","Play"]]}
+                date="April 2024"
+                className={["image-contain"]}
             />
 
             <Project
-                images={resumeAppImages}
-                title="Steam Game"
-                description="A web application that helps you write, modify and customize your resume.
-                You can store multiple versions of your resume and easily customize each one by including or excluding specific information. 
-                I designed the app with reusability in mind, to create a tool that stays with you and grows alongside you."
-                live="https://myresumewriter.netlify.app/"
-                source="https://github.com/Zukurai-Kushal/cv-app"
-                date="March 2025"
+                images={waterAuditImages}
+                title="Smart Water Auditing (AIoT)"
+                description="An AIoT system for smart water auditing. The system logs water use date for a residential household, then uses the data to train a general SVM model capable of classing water flow events based on the household's water meter readings alone."
+                source="https://github.com/Zukurai-Kushal/Water_Audit_Project_Full"
+                otherLinks={[[AIoTReport,"Technical Paper"]]}
+                date="May 2023"
             />
+
+            <Project
+                title={"Java Puzzle"}
+                description={"A simple java program that turns an image into a puzzle game"}
+                // description={"This is a simple Java program to turn any image into a puzzle game. The program converts an image into a 10x10 puzzle, it then scrambles the pieces randomly. You can then drag and drop the pieces around, a piece will lock into place once it is placed in the correct position. You win the game once all the pieces are in their original position."}
+                source={"https://github.com/Zukurai-Kushal/Java-Puzzle"}
+                date="May 2019"
+            />
+
         </AsideNavBar>
     )
 }

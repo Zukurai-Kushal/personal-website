@@ -24,7 +24,7 @@ export default function ImageCarousel({ images }) {
 
     return (
         <div className="image-carousel" >
-            <div className="image-container">
+            <div className={"image-container"}>
                 {images.map(url => (
                     <img key={url} src={url} className="image-carousel-image" style={{translate: `${-100 * imageIndex}%`}}/>
                 ))}

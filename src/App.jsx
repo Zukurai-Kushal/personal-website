@@ -17,8 +17,11 @@ function App() {
       <Header/>
       <main>
         <WebDevProjects/>
-        <OtherProjects/>
+        <OtherProjects />
       </main>
+      <footer>
+        <p>© 2025 Kushal Thapa. All rights reserved.</p>
+      </footer>
     </>
   )
 }
