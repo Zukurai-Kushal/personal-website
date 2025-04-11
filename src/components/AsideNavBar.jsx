@@ -11,7 +11,7 @@ function ObservedComponent({ callBackFunction, children, id }) {
                 callBackFunction();
             }
         }, {
-            threshold: 1,
+            threshold: 0.5,
             rootMargin: '1px'
         })
         observer.observe(myRef.current);
