@@ -16,9 +16,10 @@ export default function Header() {
                 Hi, I'm <strong>Kushal</strong>, and I like to make things.
                 <br />
                 Whether it's software development, game development, or photography,
-                I enjoy the process of bringing ideas to life—navigating challenges and celebrating the final outcome.
-                <br/>
-                Here, you will find things that I've made, from web applications to AIoT projects.
+                I enjoy the process of bringing ideas to life—navigating their challenges and celebrating the final outcome.
+                <br />
+                Here, you will find things that I've made, from web applications to AIoT systems
+                (including this very website! :D).
             </p>
             <div className="profile-links">
                 <a href="https://www.linkedin.com/in/kushal-thapa-935261207/" target="_blank" rel="noopener noreferrer">
