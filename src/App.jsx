@@ -3,6 +3,7 @@ import './styles/App.css'
 import Header from './components/Header'
 import WebDevProjects from './components/WebDevProjects'
 import OtherProjects from './components/OtherProjects'
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
       <footer>
         <p>© 2025 Kushal Thapa. All rights reserved.</p>
       </footer>
+      <Analytics />
     </>
   )
 }
